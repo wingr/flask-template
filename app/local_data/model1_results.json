@@ -1,0 +1,101 @@
+{
+    "global_scores": 
+        {
+            "f1": 0.5,
+            "precision": 0.5,
+            "recall": 0.5
+        },
+    "per_class_scores":
+        {
+            "class1": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class2": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class3": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class4": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class5": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class6": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class7": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class8": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class9": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class10": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class11": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class12": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class13": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class14": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                },
+            "class15": 
+                {
+                    "f1": 0.5,
+                    "precision": 0.5,
+                    "recall": 0.5
+                }
+        }
+}

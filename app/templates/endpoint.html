@@ -1,0 +1,76 @@
+<div class="panel-group" id="accordion">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#g_results">Global Results</a>
+      </h4>
+    </div> <!-- end of panel-heading -->
+
+    <div id="g_results" class="panel-collapse collapse in" data-parent="#accordion">
+      <div class="panel-body">
+        <h4 align="center">{{ results_dc.model }}</h4>
+      </div> <!-- end panel-body -->
+
+      <div class="panel-body">
+        <table class="table">
+          <tr>
+            <th class="text-center">Class</th>
+            <th class="text-center">F1-Score</th>
+            <th class="text-center">Precision</th>
+            <th class="text-center">Recall</th>
+          </tr>
+          {% if results_dc.global_scores %}
+            <tr>
+              <td class="text-center">All Classes </a></td>
+              <td class="text-center">{{ results_dc.global_scores.f1 | round(4) }}</a></td>
+              <td class="text-center">{{ results_dc.global_scores.precision | round(4) }}</td>
+              <td class="text-center">{{ results_dc.global_scores.recall | round(4) }}</td>
+            </tr>
+          {% endif %}
+        </table>
+      </div> <!-- end panel-body -->
+    </div> <!-- end panel-collapse -->
+  </div> <!-- end panel-default -->
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#l_results">Class-Specific Results</a>
+      </h4>
+    </div> <!-- end panel-heading -->
+
+    <div id="l_results" class="panel-collapse collapse" data-parent="#accordion">
+      <div class="panel-body">
+        <div class="scroll-box">
+          <table class="table">
+              <tr>
+                  <th class="text-center">Language</th>
+                  <th class="text-center">F1 Score</th>
+                  <th class="text-center">Precision</th>
+                  <th class="text-center">Recall</th>
+              </tr>
+              {% for key in results_dc.sorted_class_keys %}
+                  <tr>
+                      <td class="text-center">
+                        {{ key }}
+                      </td>
+                      <td class="text-center">
+                        {{ results_dc.per_class_scores[key].f1 | round(4) }}
+                      </td>
+                      <td class="text-center">
+                        {{ results_dc.per_class_scores[key].precision | round(4) }}
+                      </td>
+                      <td class="text-center">
+                        {{ results_dc.per_class_scores[key].recall | round(4) }}
+                      </td>
+                  </tr>
+              {% endfor %}
+          </table>
+        </div> <!-- end scroll-box -->
+      </div> <!-- end panel-body -->
+    </div> <!-- end panel-collapse -->
+  </div> <!-- end panel-default -->
+
+</div> <!-- end panel-group -->
+

@@ -1,4 +1,3 @@
-# Base this image off of the base Linux installation with Python 3.6.4 installed
 FROM python:3.6.4
 MAINTAINER @wingr
 

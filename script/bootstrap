@@ -4,4 +4,4 @@ set -e
 
 appdir=$(cd $(dirname "$0")/.. && pwd)
 
-cd "$appdir" && docker build -t flask-template .
+cd "$appdir" && docker-compose build -t flask-template .

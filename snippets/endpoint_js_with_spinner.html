@@ -1,0 +1,26 @@
+<!-- Normal and then spinner functions -->
+<script>
+  function trigger_api() {
+    $.ajax({
+      url: '/api/endpoint',
+      method: 'get',
+      data: {result_set: $('#result_set').val(), page_dc: page_dc},
+      success: function(data){
+        $('#resultsArea').html(data)
+      }
+    })
+  }
+</script>
+<script>
+  function trigger_api_spinner(){
+    $('#resultsArea').html("<div class='spinner-box'><span><div class='spinner'></div></span></div>");
+    $.ajax({
+      url: '/api/endpoint',
+      method: 'get',
+      data: {result_set: $('#result_set').val()},
+      success: function(data){
+        $('#resultsArea').html(data)
+      }
+    })
+  }
+</script>

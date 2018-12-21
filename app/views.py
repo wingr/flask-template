@@ -37,7 +37,7 @@ def endpoint():
 @app.route('/report')
 def report():
     """Render report."""
-    return redirect(url_for('static', filename='report.pdf'))
+    return redirect(url_for('static', filename='pdfs/report.pdf'))
 
 
 if __name__ == '__main__':

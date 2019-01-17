@@ -11,4 +11,4 @@ This repository provides a quick flask app template for serving data-centric res
 To test and/or deploy the app locally:
 1. Follow [Setup](#setup) above
 2. Execute `$ script/server`
-3. The Web GUI should be available in your broser at `0.0.0.0:5000`.
+3. The Web GUI should be available in your browser at `0.0.0.0:5000`.

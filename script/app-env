@@ -3,11 +3,13 @@
 
 set -e
 
-appdir=$(cd $(dirname "$0")/.. && pwd)
 [ -f /etc/inside-container ] && exec "$@"
 
+appdir=$(cd $(dirname "$0")/.. && pwd)
+imagename="${PWD##*/}_web"
+
 cmd="$@"; [ "$#" -eq 0 ] && cmd=bash
-image=${DOCKER_IMAGE:=flask-template}
+image=${DOCKER_IMAGE:=$imagename}
 
 if [ ! -f script/.env ]; then
     echo "Environment variables file (script/.env) not found!"
